@@ -1,0 +1,29 @@
+Autmation of Blind SQL Injection to Retrieve Database Information using python tool/ script
+
+Objective
+This document describes the steps to run a blind SQL injection on the 'Register' page of a web application to discover the table names, column names, usernames, and passwords stored in the target database.
+
+Prerequisites
+Set up and start WebGoat.
+Extract the JSESSIONID cookie from the browser's developer tools after logging into WebGoat. This will be used for automation.
+
+Steps
+
+Identify Vulnerable Fields:
+Examine each input field in the web application to identify which one is vulnerable to SQL injection. In this case, the 'user' field in the 'Register' page was identified as vulnerable.
+
+Retrieve Table Names:
+Use the following code to extract the names of the tables in the database:
+run the tables.py using command python3 tables.py in the terminal.
+
+
+Retrieve Column Names:
+For tables that seem to have relevant information, retrieve the column names. The following code extracts column names from the table SQL_CHALLENGE_USERS:
+run the columns.py using command python3 columns.py in the terminal.
+
+Extract Usernames:
+With the knowledge of the table structure, retrieve all the usernames from the database using the code below:
+run the usernames.py using command python3 usernames.py in the terminal.
+
+Retrieve Passwords:
+run the password.py using command python3 password.py in the terminal.
